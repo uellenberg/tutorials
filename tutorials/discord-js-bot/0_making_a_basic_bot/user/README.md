@@ -88,8 +88,6 @@ Now, let's invite it! Click the copy button under `Generated URL`, then paste it
 
 ## Writing Our Bot
 
-### Sending Messages
-
 ### Making Our Bot do Something
 That was a bit of a process, but we're finally able to make our bot do something. As a little example, let's try sending a message everytime someone in your server sends a message.
 
