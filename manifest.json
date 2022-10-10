@@ -2,6 +2,10 @@
     "type": "unit",
     "id": "main_tutorial",
     "name": "Tutorials",
-    "upload": [],
-    "lessons": {}
+    "upload": ["tutorials/discord-js-bot"],
+    "lessons": {
+        "discord_js_bots": {
+            "next": []
+        }
+    }
 }
