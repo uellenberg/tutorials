@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended"],
+    "rules": {
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"],
+        "comma-dangle": ["error", "always-multiline"],
+        "comma-style": ["error", "last"],
+        "no-trailing-spaces": ["error"],
+        "spaced-comment": ["error", "always"],
+        "line-comment-position": ["error", "above"]
+    }
+}
