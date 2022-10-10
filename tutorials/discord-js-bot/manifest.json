@@ -1,0 +1,12 @@
+{
+    "__comment": "This is a unit that contains various tutorials about discord.js.",
+    "type": "unit",
+    "id": "discord_js_bots",
+    "name": "Discord.JS Bots",
+    "upload": ["0_making_a_basic_bot"],
+    "lessons": {
+        "tut_basic_discord_js_bot": {
+            "next": []
+        }
+    }
+}
