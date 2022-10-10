@@ -150,3 +150,5 @@ client.on("messageCreate", (msg) => {
 Now, restart your bot by clicking the Run and see if it works. If it does, then great! You've just made a working discord bot! Otherwise, click [here](../examples/final.js) for an example to compare to your code.
 
 In the next lesson, we'll go over how to create commands and make our bot a little more capable. That's all for now though, have fun!
+
+In case you got here with the wrong URL, you can access every discord.js tutorial at https://cratecode.com/unit/ru1w1f268c.
