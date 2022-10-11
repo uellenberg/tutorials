@@ -1,6 +1,6 @@
 # Creating a Discord.JS Bot
 
-Discord is a social platform for people all around the world to share in their common interests. Like many social platforms, discord can be enhanced with bots—little automations that can do anything from increasing your productivity to playing music for you, and even playing mini-games inside of discord. The possibilities for a discord bot are nearly endless.
+Discord is a social platform for people all around the world to build communities around their common interests. Like many social platforms, discord can be enhanced with bots—little automations that can do anything from increasing your productivity to playing music for you, and even playing mini-games inside of discord. The possibilities for a discord bot are nearly endless.
 
 So, how do we make one?
 
@@ -16,7 +16,7 @@ Now, where were we? `discord.js` is a JavaScript library that lets us connect to
 
 ### A Simple Discord Bot
 
-Now, open up or create a file called `index.js`. If you're creating your bot on Cratecode, you can click the folder icon to your right, then double-click on `index.js`. Now, we have to connect it to discord. [Here's an example piece of code that you can use to do that](../examples/basic.js).
+Now, open up or create a file called `index.js`. If you're creating your bot on Cratecode, you can click the folder icon to your left, then double-click on `index.js`. Now, we have to connect it to discord. [Here's an example piece of code that you can use to do that](../examples/basic.js).
 
 If you try to run this code, you might notice a glaring issue: `BOT_TOKEN` isn't defined. We need credentials (think username and password) to log in to discord. Before we can get our `BOT_TOKEN`, we need to talk about how to secure it.
 
@@ -59,7 +59,7 @@ Once you have that, it's time to actually use the bot token. Open up `index.js` 
 
 `process.env` contains all of our secrets stored in the `.env` file. Doing `process.env.BOT_TOKEN` gets the bot token stored in it. For the example `.env` file above, doing `process.env.BOT_TOKEN` would be `"ABCDEFG"`, and so would pass `"ABCDEFG"` to the `client.login` function.
 
-Now, let's do a quick check to ensure that our bot is actually setup. Click the `Run` button (or if you aren't on Cratecode, type `node index.js`). You should now see a message that says `Connected Successfully!`. If you don't, or if you received an error, then there's something wrong with your setup. In the end, your file should look like [this](../examples/authed.js).
+Now, let's do a quick check to ensure that our bot is actually set up. Click the `Run` button (or if you aren't on Cratecode, type `node index.js`). You should now see a message that says `Connected Successfully!`. If you don't, or if you received an error, then there's something wrong with your setup. In the end, your file should look like [this](../examples/authed.js).
 
 ### Adding The Bot to Our Server
 
@@ -67,12 +67,14 @@ At this point, we have a little program that can connect to discord, but it isn'
 
 We'll start by heading back to the [Discord Developer Portal](https://discord.com/developers/applications). If you closed it, just open it again and click on your bot. In order to invite the bot, we'll generate a link that we can use to add the bot to one of our servers. Keep in mind that you need to have permissions to add a bot to a server. You can ask someone with permission to add the bot to a server or create your own testing server and add the bot there.
 
-Now, inside the Discord Developer Portal, Click on the `OAuth2` tab, then click the `URL Generator` tab under it.
+Now, inside the Discord Developer Portal, click on the `OAuth2` tab, then click the `URL Generator` tab under it.
 
 
 ![Open the URL Generator sub-tab](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-url-generator.png)
 
-Now, click the `bot` and `applications.commands` checkboxes. The `bot` checkbox sets it to invite the bot, and `applications.commands` lets you use slash commands (more on that later).
+This is a page that we can use to create an invite link for our bot. This link will let us (and other people) invite the bot to join servers.
+
+Now, click the `bot` and `applications.commands` checkboxes. The `bot` checkbox makes the link invite the bot (this page can do more than just generate bot invite links, but we'll ignore that for right now), and `applications.commands` lets you use slash commands (more on that later).
 
 ![Click bot and applications.commands](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-basic-perms.png)
 
@@ -80,7 +82,7 @@ Now, you should notice a little window pop-up called `Bot Permissions`. This let
 
 ![Add permissions to your bot](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-advanced-perms.png)
 
-*If you want to add permissions later, you can always re-do this or change your bots permissions in your server settings inside of discord.*
+*If you want to add permissions later, you can always redo this or change your bots permissions in your server settings inside of discord.*
 
 Now, let's invite it! Click the copy button under `Generated URL`, then paste it into your web browser. Then, select a server, click the continue button, and proceed with the form. You should see your bot appear in your server. If you don't, make sure you went through the form completely and selected the correct server.
 
