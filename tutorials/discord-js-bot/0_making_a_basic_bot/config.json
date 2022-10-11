@@ -7,5 +7,9 @@
     "command": {
       "value": "node ~/project/user/index.js"
     }
+  },
+  "view": {
+    "toolboxWidth": 50,
+    "editorHeight": 75
   }
 }
