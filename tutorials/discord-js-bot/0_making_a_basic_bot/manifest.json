@@ -2,6 +2,6 @@
     "type": "lesson",
     "id": "tut_basic_discord_js_bot",
     "name": "Making a Basic Discord Bot in JavaScript (discord.js)",
-    "spec": "A discord bot written in discord.js that responds to basic slash commands.",
+    "spec": "A basic discord bot using discord.js which sends a message every time a user sends a message.",
     "class": "tutorial"
 }

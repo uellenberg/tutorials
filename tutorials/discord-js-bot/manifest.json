@@ -3,9 +3,12 @@
     "type": "unit",
     "id": "discord_js_bots",
     "name": "Discord.JS Bots",
-    "upload": ["0_making_a_basic_bot"],
+    "upload": ["0_making_a_basic_bot", "1_adding_slash_commands"],
     "lessons": {
         "tut_basic_discord_js_bot": {
+            "next": ["tut_basic_discord_js_slash_commands"]
+        },
+        "tut_basic_discord_js_slash_commands": {
             "next": []
         }
     }

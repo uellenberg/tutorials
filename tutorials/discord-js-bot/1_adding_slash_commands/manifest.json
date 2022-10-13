@@ -1,0 +1,7 @@
+{
+    "type": "lesson",
+    "id": "tut_basic_discord_js_slash_commands",
+    "name": "Adding Slash Commands to a Discord Bot in JavaScript (discord.js)",
+    "spec": "A discord bot written in discord.js that responds to basic slash commands.",
+    "class": "tutorial"
+}

@@ -1,0 +1,14 @@
+{
+  "root": "/user",
+  "outputViews": ["console"],
+  "defaultFile": "user/index.js",
+  "run": {
+    "command": {
+      "value": "node ~/project/user/index.js"
+    }
+  },
+  "view": {
+    "toolboxWidth": 50,
+    "editorHeight": 75
+  }
+}
