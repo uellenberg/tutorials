@@ -29,16 +29,16 @@ One common practice is to store "secrets" (like passwords) in a file called `.en
 To connect to discord, we need a bot account. It's similar to your discord account, but it has a little "Bot" badge next to it and can be used as a discord bot. To create a bot account, you first need to do it. Here's how:
 1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
 2. Press the `New Application` button.
-![Click the New Application button](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-new-app.png)
+![Click the New Application button](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-new-app.png)
 
 3. Give your bot a name and press the `Create` button. I'll call mine `Counter Bot`, but you can call yours anything.
-![Click the Create button](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-new-app-create.png)
+![Click the Create button](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-new-app-create.png)
 
 Now, you should see your bot application's page. You can change the details (like the username, profile picture, and description) for your bot here, and you can always come back at any time from the discord developer portal. To make your bot account, click the `Bot` button in the panel to the left. After that, click the `Add Bot` button. Congratulations, your bot now has a discord account!
 
-![Go to the Bot page](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-bot-page.png)
+![Go to the Bot page](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-bot-page.png)
 
-![Click the Add Bot button](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-add-bot.png)
+![Click the Add Bot button](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-add-bot.png)
 
 ### Bot Token
 
@@ -46,7 +46,7 @@ On this page you can access something called the `token`. The token is basically
 
 Now that that's out of the way, let's get the bot token. All you need to do is click the `Reset Token` button. It's important to note that if you reload the page, you won't be able to access your bot token (you can always reset it again though), so make sure to copy it. Now, let's add it to our bot.
 
-![Click the Reset Token button](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-reset-token.png)
+![Click the Reset Token button](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-reset-token.png)
 
 ### Using Our Bot Token
 
@@ -70,23 +70,23 @@ We'll start by heading back to the [Discord Developer Portal](https://discord.co
 Now, inside the Discord Developer Portal, click on the `OAuth2` tab, then click the `URL Generator` tab under it.
 
 
-![Open the URL Generator sub-tab](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-url-generator.png)
+![Open the URL Generator sub-tab](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-url-generator.png)
 
 This is a page that we can use to create an invite link for our bot. This link will let us (and other people) invite the bot to join servers.
 
 Now, click the `bot` and `applications.commands` checkboxes. The `bot` checkbox makes the link invite the bot (this page can do more than just generate bot invite links, but we'll ignore that for right now), and `applications.commands` lets you use slash commands (more on that later).
 
-![Click bot and applications.commands](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-basic-perms.png)
+![Click bot and applications.commands](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-basic-perms.png)
 
 Now, you should notice a little window pop-up called `Bot Permissions`. This lets you set what permissions your bot has in your server. You can add anything you think your bot should have, but a good start are the `Read Messages/View Channels`, `Send Messages`, `Send Messages in Threads`, `Embed Links`, `Attach Files`, `Add Reactions`, `Connect`, and `Speak` permissions. This lets your bot do similar things to ordinary discord users.
 
-![Add permissions to your bot](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-advanced-perms.png)
+![Add permissions to your bot](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-advanced-perms.png)
 
 *If you want to add permissions later, you can always redo this or change your bots permissions in your server settings inside of discord.*
 
 Now, let's invite it! Click the copy button under `Generated URL`, then paste it into your web browser. Then, select a server, click the continue button, and proceed with the form. You should see your bot appear in your server. If you don't, make sure you went through the form completely and selected the correct server.
 
-![Invite your bot to your server](https://raw.githubusercontent.com/Cratecode/tutorials/discord-js-images-1/images/discord-developer-portal-invite-bot.png)
+![Invite your bot to your server](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-invite-bot.png)
 
 ## Writing Our Bot
 
