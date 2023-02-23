@@ -1,0 +1,12 @@
+{
+    "__comment": "This is a unit that contains various articles on programming.",
+    "type": "unit",
+    "id": "programming_tips",
+    "name": "Programming Tips",
+    "upload": ["0_common_programming_pitfalls"],
+    "lessons": {
+        "art_common_programming_pitfalls": {
+            "next": []
+        }
+    }
+}

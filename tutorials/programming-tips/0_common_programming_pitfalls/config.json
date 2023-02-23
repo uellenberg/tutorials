@@ -1,0 +1,9 @@
+{
+  "root": "/",
+  "run": {
+    "hideButton": true
+  },
+  "view": {
+    "toolboxWidth": 100
+  }
+}
