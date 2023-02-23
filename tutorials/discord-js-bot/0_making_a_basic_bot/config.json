@@ -2,7 +2,6 @@
   "root": "/user",
   "outputViews": ["console"],
   "defaultFile": "user/index.js",
-  "spec": "A basic discord bot using discord.js which sends a message every time a user sends a message.",
   "run": {
     "command": {
       "value": "node ~/project/user/index.js"
