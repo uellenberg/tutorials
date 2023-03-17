@@ -12,7 +12,7 @@ The first step is to write a program that connects to discord. We'll do that usi
 
 Before we go any further, I'd like to give a quick reminder about how Cratecode works to anyone reading this. If you haven't already, signing up to Cratecode gives you access to writing and running your code in-browser. That means you can create your discord bot and follow this tutorial in the same window. If you still aren't signed up, you can keep reading, but you'll have to write your code somewhere other than Cratecode.
 
-Now, where were we? `discord.js` is a JavaScript library that lets us connect to discord. To use it, run `pnpm add discord.js` in the console (or `npm i discord.js`, your pick). Now that we have `discord.js` installed, we can start using it.
+Now, where were we? `discord.js` is a JavaScript library that lets us connect to discord. To use it, run `yarn add discord.js` in the console (or `npm i discord.js`, your pick). Now that we have `discord.js` installed, we can start using it.
 
 ### A Simple Discord Bot
 
@@ -22,7 +22,7 @@ If you try to run this code, you might notice a glaring issue: `BOT_TOKEN` isn't
 
 ### .env Files
 
-One common practice is to store "secrets" (like passwords) in a file called `.env`. Then, if we want to send our code to someone else, we can simply send it without the `.env` file, and our secrets our same. In order to do this, we need to do three things. First, we'll install a library called `dotenv`, which works with `.env.` files. You can do this by typing `pnpm add dotenv` into your console. Next, we need to tell `dotenv` to load our `.env` file. You can do this by adding `require("dotenv).config();` to the very top of your `index.js` file. Now, all that's left is to create a `.env` file and add secrets to it.
+One common practice is to store "secrets" (like passwords) in a file called `.env`. Then, if we want to send our code to someone else, we can simply send it without the `.env` file, and our secrets our same. In order to do this, we need to do three things. First, we'll install a library called `dotenv`, which works with `.env.` files. You can do this by typing `yarn add dotenv` into your console. Next, we need to tell `dotenv` to load our `.env` file. You can do this by adding `require("dotenv).config();` to the very top of your `index.js` file. Now, all that's left is to create a `.env` file and add secrets to it.
 
 ### Creating a Bot Account
 
