@@ -99,7 +99,7 @@ function sumToN(n) {
 
 Now, paired with the JSDoc comment, our function is a bit more descriptive. Also, I didn't change `n` to something else. The reason is that, while before `n` was just a random name, it now carries some significance within the function. Because our function name (`sumToN`) directly references `n`, it's obvious what `n` represents, so it's good as-is. Some variables inside the function, on the other hand, aren't.
 
-First, we'll tackle `s`. We should give it a name that carries some significance and is related to what it does. `s` is the `sum`, and also the `output`. Both of those are perfectly valid, names, but I'm going to go with `sum`.
+First, we'll tackle `s`. We should give it a name that carries some significance and is related to what it does. `s` is the `sum`, and also the `output`. Both of those are perfectly valid names, but I'm going to go with `sum`.
 
 Next up is `i`. This one is a little tricky, because `i` is a common variable in for loops. However, it's usually used as an array/list index (`i` stands for index), and because we aren't using it as an index here, it doesn't make much sense to call it `i` (and even if it was an index, it still might be a good idea to make it more descriptive, but that's up to you). In this case, `i` represents the number being added to the sum, so we can call it `num`:
 ```js
