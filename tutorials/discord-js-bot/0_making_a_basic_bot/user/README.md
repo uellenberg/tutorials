@@ -59,7 +59,7 @@ Once you have that, it's time to actually use the bot token. Open up `index.js` 
 
 `process.env` contains all of our secrets stored in the `.env` file. Doing `process.env.BOT_TOKEN` gets the bot token stored in it. For the example `.env` file above, doing `process.env.BOT_TOKEN` would be `"ABCDEFG"`, and so would pass `"ABCDEFG"` to the `client.login` function.
 
-Now, let's do a quick check to ensure that our bot is actually set up. Click the `Run` button (or if you aren't on Cratecode, type `node index.js`). You should now see a message that says `Connected Successfully!`. If you don't, or if you received an error, then there's something wrong with your setup. In the end, your file should look like [this](../examples/authed.js).
+Now, let's do a quick check to ensure that our bot is actually set up. Click the `Run` button (or if you aren't on Cratecode, type `node index.js`). You should now see a message that says `Connected Successfully!`. If you don't, or if you receive an error, then there's something wrong with your setup. In the end, your file should look like [this](../examples/authed.js).
 
 ### Adding The Bot to Our Server
 
@@ -82,7 +82,7 @@ Now, you should notice a little window pop-up called `Bot Permissions`. This let
 
 ![Add permissions to your bot](https://raw.githubusercontent.com/uellenberg/tutorials/discord-js-images-1/images/discord-developer-portal-advanced-perms.png)
 
-*If you want to add permissions later, you can always redo this or change your bots permissions in your server settings inside of discord.*
+*If you want to add permissions later, you can always redo this or change your bot's permissions in your server settings inside of discord.*
 
 Now, let's invite it! Click the copy button under `Generated URL`, then paste it into your web browser. Then, select a server, click the continue button, and proceed with the form. You should see your bot appear in your server. If you don't, make sure you went through the form completely and selected the correct server.
 
@@ -123,7 +123,7 @@ Your code should look something like [this](../examples/msg-recv.js) (the order 
 
 Now, one thing that we need to know before we continue is that this event will be called when we send a message. If we send a message on every message, our bot will receive someone's message, then send a message, then receive its own message, then send a message, then receive its own message, then send a message, then receive its own message ...
 
-We do not want this. Luckily, there's an easy fix. Using a similar method as in the previous section, we can figure out that (if our Message object is called `msg`) `msg.author.bot` will tell us if the person that sent the message is a bot. An easy fix is to just ignore every message sent by a bot (to prevent us from getting into an infinite loop with ourselves and with another bot). If we wanted, we could use `msg.author.me` to only ignore our bot, but I'm going to use `msg.author.bot` due to the aforementioned reason.
+We don't want this. Luckily, there's an easy fix. Using a similar method as in the previous section, we can figure out that (if our Message object is called `msg`) `msg.author.bot` will tell us if the person that sent the message is a bot. An easy fix is to just ignore every message sent by a bot (to prevent us from getting into an infinite loop with ourselves and with another bot). If we wanted, we could use `msg.author.me` to only ignore our bot, but I'm going to use `msg.author.bot` due to the aforementioned reason.
 
 To use this, we just need to add an if statement to our code:
 ```js

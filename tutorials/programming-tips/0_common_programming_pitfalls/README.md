@@ -73,13 +73,13 @@ function sum(n) {
 }
 ```
 
-Nice! This function still has issues, but adding comments helps us make our intentions behind the code clearer, and allows us to focus on the "big picture" ideas. For more info on how to write good comments, check out this [StackOverflow blog post on the topic](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/). Now, let's take a look at naming.
+Nice! This function still has issues, but adding comments helps us make our intentions behind the code clearer and allows us to focus on the "big picture" ideas. For more info on how to write good comments, check out this [StackOverflow blog post on the topic](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/). Now, let's take a look at naming.
 
 ## Naming
 
-Like comments, naming things well makes our code more understandable. Names should be clear and precise, and should give us hints at what the thing with the name does (functions) or contains (variables), and how it's used in the code. Also, like comments, naming shouldn't be an afterthought. If you don't name things well, while you're writing your code, it can lead to confusion later down the line.
+Like comments, naming things well makes our code more understandable. Names should be clear and precise, and should give us hints at what the thing with the name does (functions) or contains (variables), and how it's used in the code. Also, like comments, naming shouldn't be an afterthought. If you don't name things well while you're writing your code, it can lead to confusion later down the line.
 
-Our example code does not name things well. First off, the function declaration (the line that starts with `function`) is pretty unclear. What is it summing? What is `n`? We can come up with some new names that are a bit more descriptive (making sure to update our comments as well):
+Our example code doesn't name things well. First off, the function declaration (the line that starts with `function`) is pretty unclear. What is it being summed up? What is `n`? We can come up with some new names that are a bit more descriptive (making sure to update our comments as well):
 ```js
 /**
  * Sums every number from 1 to n (inclusive), and returns the result.
@@ -97,11 +97,11 @@ function sumToN(n) {
 }
 ```
 
-Now, paired with the JSDoc comment, our function is a bit more descriptive. Also, I didn't change `n` to something else. The reason is that, while before `n` was just a random name, it now carries some significance within the function. Because our function name (`sumToN`) directly references `n`, it's obvious what `n` represents, so it's good as-is. Some variables inside the function, on the other hand, are not.
+Now, paired with the JSDoc comment, our function is a bit more descriptive. Also, I didn't change `n` to something else. The reason is that, while before `n` was just a random name, it now carries some significance within the function. Because our function name (`sumToN`) directly references `n`, it's obvious what `n` represents, so it's good as-is. Some variables inside the function, on the other hand, aren't.
 
-First, we'll tackle `s`. We should give it a name that carries some significance, and is related to what it does. `s` is the `sum`, and also the `output`. Both of those are perfectly valid, names, but I'm going to go with `sum`.
+First, we'll tackle `s`. We should give it a name that carries some significance and is related to what it does. `s` is the `sum`, and also the `output`. Both of those are perfectly valid, names, but I'm going to go with `sum`.
 
-Next up is `i`. This one is a little tricky, because `i` is a common variable in for loops. However, it's usually used as an array/list index (i stands for index), and because we aren't using it as an index here, it doesn't make much sense to call it `i` (and even if it was an index, it still might be a good idea to make it more descriptive, but that's up to you). In this case, `i` represents the number being added to the sum, so we can call it `num`:
+Next up is `i`. This one is a little tricky, because `i` is a common variable in for loops. However, it's usually used as an array/list index (`i` stands for index), and because we aren't using it as an index here, it doesn't make much sense to call it `i` (and even if it was an index, it still might be a good idea to make it more descriptive, but that's up to you). In this case, `i` represents the number being added to the sum, so we can call it `num`:
 ```js
 /**
  * Sums every number from 1 to n (inclusive), and returns the result.
@@ -152,6 +152,7 @@ function sum(n) {
     return i;
 }
 ```
+*(the loop won't run at all if we put anything bigger than `1` in!)*
 
 Now our code is even farther from being correct. This is actually one of the reasons that good naming and comments are so important: if we made the same changes with our new code, it's obvious that it's incorrect (whereas our original code and the broken version look nearly identical):
 ```js
@@ -171,7 +172,7 @@ function sumToN(n) {
 }
 ```
 
-What we should really do in this situation is try to debug our code. There are many ways to go about this, but the simplest way here might be to just trace it. If we go through our code the same way a computer might, we'll notice that `sum` never gets added to. Instead, it always gets overridden, and in the end, `sum` has the same value as `n`. This is an easy fix: we just need to replace `sum = num` with `sum += num`. Here's the fixed code:
+What we should really do in this situation is try to debug our code. There are many ways to go about this, but the simplest way here might be to just trace it. If we go through our code the same way a computer might, we'll notice that `sum` never gets added to. Instead, it always gets overridden, and in the end, `sum` has the same value as `n`. Does it really make sense for something called `sum` to never be added to? Luckily, this is an easy fix: we just need to replace `sum = num` with `sum += num`. Here's the fixed code:
 ```js
 /**
  * Sums every number from 1 to n (inclusive), and returns the result.
@@ -193,7 +194,7 @@ Now, our code finally works! Not only that, but it looks good and is understanda
 
 ## Un-optimized Code
 
-Optimizing code means making it run faster. Of course, optimizing code shouldn't be your main priority (especially if you're just starting out), but there are still some places where you should optimize. A big way to optimize your code is thinking about whether your overall strategy is the best way of doing something. In our example, we're going through every number from `1` to `n` in order to sum them all together. But often times, there's a better way to do things. If we look up "sum from 1 to n", we might come across this [Wikipedia article](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) that gives us a formula for doing this, no loops required! By taking a different approach, we can completely remove our loop and make our code a lot simpler:
+Optimizing code means making it run faster. Of course, optimizing code shouldn't be your main priority (especially if you're just starting out), but there are still some places where you should optimize. A big way to optimize your code is thinking about whether your overall strategy is the best way of doing something. In our example, we're going through every number from `1` to `n` in order to sum them all together. But frequently, there's a better way to do things. If we look up "sum from 1 to n", we might come across this [Wikipedia article](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) that gives us a formula for doing this, no loops required! By taking a different approach, we can completely remove our loop and make our code a lot simpler:
 ```js
 /**
  * Sums every number from 1 to n (inclusive), and returns the result.
@@ -209,7 +210,7 @@ I wouldn't worry too much about optimizing your code, but it can be helpful to s
 
 ## Closing Thoughts
 
-The most important thing, in my opinion, is to keep your code clean. A big part of that is comments and good naming conventions. There's nothing wrong with needing to clean things up when you're done (there's no sense in making your code pretty if it'll just be re-written), but there are a lot of things that seem like they can be done at the end but are actually extremely helpful to you while you're writing your code. You don't need to make your code pretty (especially when you're writing it), but it always needs to be readable and understandable.
+The most important thing, in my opinion, is to keep your code clean, since clean code is just easier to understand. A big part of that comes down to comments and good naming conventions. There's nothing wrong with needing to clean things up when you're done (there's no sense in making your code pretty if it'll just be re-written), but there are a lot of things that seem like they can be done at the end but are actually extremely helpful to you while you're writing your code. You don't need to make your code pretty (especially when you're writing it), but it always needs to be readable and understandable.
 
 I highly recommend you take a look at some resources that were linked to above. They go much more in-depth into some of these topics than I have, and are excellent references for keeping your code clean.
 
