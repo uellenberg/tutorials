@@ -1,14 +1,16 @@
 {
-  "root": "/user",
-  "outputViews": ["console"],
-  "defaultFile": "user/index.js",
-  "run": {
-    "command": {
-      "value": "node ~/project/user/index.js"
-    }
-  },
-  "view": {
-    "toolboxWidth": 50,
-    "editorHeight": 75
-  }
+    "root": "/user",
+    "outputViews": ["console"],
+    "defaultFile": "user/index.js",
+    "run": {
+      "command": {
+        "value": "node ~/project/user/index.js"
+      }
+    },
+    "view": {
+      "toolboxWidth": 50,
+      "editorHeight": 75
+    },
+    "source": "https://github.com/uellenberg/tutorials/tree/master/tutorials/discord-js-bot/0_making_a_basic_bot",
+    "showShareButton": true
 }

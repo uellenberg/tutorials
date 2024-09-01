@@ -1,10 +1,12 @@
 {
-  "root": "/",
-  "run": {
-    "hideButton": true
-  },
-  "view": {
-    "toolboxWidth": 100
-  },
-  "textOnly": true
+    "root": "/",
+    "run": {
+      "hideButton": true
+    },
+    "view": {
+      "toolboxWidth": 100
+    },
+    "textOnly": true,
+    "source": "https://github.com/uellenberg/tutorials/tree/master/tutorials/programming-tips/0_common_programming_pitfalls",
+    "showShareButton": true
 }
