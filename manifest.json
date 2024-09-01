@@ -3,6 +3,7 @@
     "id": "main_tutorial",
     "name": "Tutorials",
     "upload": ["tutorials/discord-js-bot", "tutorials/programming-tips"],
+    "images": "images",
     "lessons": {
         "discord_js_bots": {
             "next": []
