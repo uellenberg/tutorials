@@ -4,7 +4,7 @@
     "defaultFile": "user/index.js",
     "run": {
       "command": {
-        "value": "node ~/project/user/index.js"
+        "value": "node ~/project/user/index.js\n"
       }
     },
     "view": {
